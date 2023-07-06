@@ -1,7 +1,9 @@
+import { ProductsGrid } from '@/sections/ProductsGrid/ProductsGrid';
+
 export default function Products() {
   return (
     <>
-      <h2 className='text-5xl'>Products page</h2>
+      <ProductsGrid />
     </>
   );
 }

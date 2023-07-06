@@ -1,25 +1,27 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { ProductCard } from '@/components/ProductCard/ProductCard';
+import { productsList } from '@/data/data';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './ProductsSlider.css';
 
-export const ProductsSlider = ({ productsList }) => {
+export const ProductsSlider = () => {
   return (
-    <section className='py-14'>
+    <section className='section'>
       <div className='default-content'>
-        <h2 className='pb-10 text-5xl'>Продукти hidrostal</h2>
+        <h2 className='title'>Продукція hidrostal</h2>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
           slidesPerView={3}
           spaceBetween={30}
+          pagination
           navigation>
-          {productsList.map((item, index) => (
-            <SwiperSlide key={index}>
+          {productsList.map((item) => (
+            <SwiperSlide key={item.id}>
               <ProductCard {...item} />
             </SwiperSlide>
           ))}

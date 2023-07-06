@@ -9,3 +9,11 @@ body {
 .default-content {
   @apply mx-auto w-full max-w-[1640px] px-7 sm:px-14;
 }
+
+.title {
+  @apply text-5xl mb-10;
+}
+
+.section {
+  @apply py-16;
+}

@@ -1,3 +1,7 @@
 .swiper-slide {
   @apply h-auto;
 }
+
+.swiper-pagination {
+  @apply translate-y-2;
+}
