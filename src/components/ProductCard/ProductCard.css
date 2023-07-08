@@ -1,0 +1,3 @@
+.ProductCard:hover .ProductCard__button {
+  @apply block;
+}

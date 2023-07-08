@@ -1,0 +1,15 @@
+.UsageCard {
+  background-size: 140%;
+}
+
+.UsageCard:hover {
+  background-size: 145%;
+}
+
+.UsageCard:hover .UsageCard__title {
+  @apply bg-black/20 duration-1000;
+}
+
+.UsageCard:hover .UsageCard__description {
+  @apply bg-black/20 duration-1000;
+}

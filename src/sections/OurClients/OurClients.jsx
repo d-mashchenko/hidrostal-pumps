@@ -1,13 +1,14 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { ClientCard } from '@/components/ClientCard/ClientCard';
-import Link from 'next/link';
 import { clientsList } from '@/app/clients/page';
+import { Button } from '@/components/Button/Button';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
 export const OurClients = () => {
   return (
@@ -15,17 +16,16 @@ export const OurClients = () => {
       <div className='default-content'>
         <div className='flex justify-between'>
           <h2 className='pb-10 text-5xl'>Наші клієнти</h2>
-          <Link
-            className='bg-primary-500 py-3 px-4 text-white rounded self-start'
-            href='/clients'>
-            Дивитись всіх клієнтів
-          </Link>
+          <Button href='/clients' text='Дивитись всіх клієнтів' />
         </div>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={3}
           spaceBetween={30}
-          pagination
+          pagination={{
+            el: '.clients-pagination',
+          }}
+          autoplay
           navigation>
           {clientsList.map((item, index) => (
             <SwiperSlide key={index}>
@@ -33,6 +33,7 @@ export const OurClients = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className='clients-pagination text-center py-1'>pagination</div>
       </div>
     </section>
   );

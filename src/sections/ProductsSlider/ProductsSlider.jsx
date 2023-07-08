@@ -1,24 +1,35 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { ProductCard } from '@/components/ProductCard/ProductCard';
 import { productsList } from '@/data/data';
+import { Button } from '@/components/Button/Button';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 import './ProductsSlider.css';
 
 export const ProductsSlider = () => {
   return (
     <section className='section'>
       <div className='default-content'>
-        <h2 className='title'>Продукція hidrostal</h2>
+        <div className='flex justify-between'>
+          <h2 className='title'>Продукція hidrostal</h2>
+          <Button href='/products' text='Дивитись всю продукцію' />
+        </div>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={3}
           spaceBetween={30}
-          pagination
+          pagination={{
+            el: '.products-pagination',
+          }}
+          loop
+          autoplay={{
+            pauseOnMouseEnter: true,
+          }}
           navigation>
           {productsList.map((item) => (
             <SwiperSlide key={item.id}>
@@ -26,6 +37,7 @@ export const ProductsSlider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className='products-pagination text-center py-1'></div>
       </div>
     </section>
   );

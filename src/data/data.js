@@ -25,35 +25,16 @@ export const productsList = [
       },
     ],
     highlights: [
-      {
-        title: 'Solids handling of 50 mm (2") in diameter',
-      },
-      {
-        title:
-          'Robust unit capable of handling liquids containing fibrous matter',
-      },
-      {
-        title:
-          'Steep curve giving pressure reserve when pumping thick materials',
-      },
-      {
-        title:
-          'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
-      },
+      'Solids handling of 50 mm (2") in diameter',
+      'Robust unit capable of handling liquids containing fibrous matter',
+      'Steep curve giving pressure reserve when pumping thick materials',
+      'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
     ],
     applications: [
-      {
-        title: 'Industrial effluent',
-      },
-      {
-        title: 'Viscous sludge',
-      },
-      {
-        title: 'Return activated sludge',
-      },
-      {
-        title: 'Drainage',
-      },
+      'Industrial effluent',
+      'Viscous sludge',
+      'Return activated sludge',
+      'Drainage',
     ],
     specifications: [
       'Discharge-Sizes: 50 - 80 mm (2 - 3")',
@@ -69,11 +50,11 @@ export const productsList = [
   {
     id: '2',
     image:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_94/Thumb/compact-pump.jpg',
-    title: 'The Second pump',
-    description: 'Some dedcription of the second pump',
+      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_97/Thumb/end-suction-bearing-frame-pumps.jpg',
+    title: 'The first pump',
+    description: 'Some dedcription of the first pump',
     headerImage:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_67/hinlnetherlands-rwziweespinfluentgemaal-f10kmitimmersiblemotorauffussbogen-hidrostal05102021-1719.jpg',
+      'https://www.halternerzeitung.de/wp-content/uploads/2022/07/630_0900_2369622_0926ha_wassergewinnung06.jpg',
     headerTitle: 'Compact Pumps',
     headerSubtitle:
       'Hidrostal Screw Centrifugal Compact Pumps are portable, heavy duty field units which combine usability and robustness with the superior hydraulic and solid handling performance of the famous screw centrifugal impeller.',
@@ -89,35 +70,16 @@ export const productsList = [
       },
     ],
     highlights: [
-      {
-        title: 'Solids handling of 50 mm (2") in diameter',
-      },
-      {
-        title:
-          'Robust unit capable of handling liquids containing fibrous matter',
-      },
-      {
-        title:
-          'Steep curve giving pressure reserve when pumping thick materials',
-      },
-      {
-        title:
-          'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
-      },
+      'Solids handling of 50 mm (2") in diameter',
+      'Robust unit capable of handling liquids containing fibrous matter',
+      'Steep curve giving pressure reserve when pumping thick materials',
+      'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
     ],
     applications: [
-      {
-        title: 'Industrial effluent',
-      },
-      {
-        title: 'Viscous sludge',
-      },
-      {
-        title: 'Return activated sludge',
-      },
-      {
-        title: 'Drainage',
-      },
+      'Industrial effluent',
+      'Viscous sludge',
+      'Return activated sludge',
+      'Drainage',
     ],
     specifications: [
       'Discharge-Sizes: 50 - 80 mm (2 - 3")',
@@ -134,10 +96,10 @@ export const productsList = [
     id: '3',
     image:
       'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_97/Thumb/end-suction-bearing-frame-pumps.jpg',
-    title: 'The third pump',
-    description: 'Some dedcription of the third pump',
+    title: 'The first pump',
+    description: 'Some dedcription of the first pump',
     headerImage:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_67/hinlnetherlands-rwziweespinfluentgemaal-f10kmitimmersiblemotorauffussbogen-hidrostal05102021-1719.jpg',
+      'https://www.halternerzeitung.de/wp-content/uploads/2022/07/630_0900_2369622_0926ha_wassergewinnung06.jpg',
     headerTitle: 'Compact Pumps',
     headerSubtitle:
       'Hidrostal Screw Centrifugal Compact Pumps are portable, heavy duty field units which combine usability and robustness with the superior hydraulic and solid handling performance of the famous screw centrifugal impeller.',
@@ -153,35 +115,16 @@ export const productsList = [
       },
     ],
     highlights: [
-      {
-        title: 'Solids handling of 50 mm (2") in diameter',
-      },
-      {
-        title:
-          'Robust unit capable of handling liquids containing fibrous matter',
-      },
-      {
-        title:
-          'Steep curve giving pressure reserve when pumping thick materials',
-      },
-      {
-        title:
-          'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
-      },
+      'Solids handling of 50 mm (2") in diameter',
+      'Robust unit capable of handling liquids containing fibrous matter',
+      'Steep curve giving pressure reserve when pumping thick materials',
+      'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
     ],
     applications: [
-      {
-        title: 'Industrial effluent',
-      },
-      {
-        title: 'Viscous sludge',
-      },
-      {
-        title: 'Return activated sludge',
-      },
-      {
-        title: 'Drainage',
-      },
+      'Industrial effluent',
+      'Viscous sludge',
+      'Return activated sludge',
+      'Drainage',
     ],
     specifications: [
       'Discharge-Sizes: 50 - 80 mm (2 - 3")',
@@ -197,11 +140,11 @@ export const productsList = [
   {
     id: '4',
     image:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_94/Thumb/compact-pump.jpg',
-    title: 'The fourth pump',
-    description: 'Some dedcription of the fourth pump',
+      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_97/Thumb/end-suction-bearing-frame-pumps.jpg',
+    title: 'The first pump',
+    description: 'Some dedcription of the first pump',
     headerImage:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_67/hinlnetherlands-rwziweespinfluentgemaal-f10kmitimmersiblemotorauffussbogen-hidrostal05102021-1719.jpg',
+      'https://www.halternerzeitung.de/wp-content/uploads/2022/07/630_0900_2369622_0926ha_wassergewinnung06.jpg',
     headerTitle: 'Compact Pumps',
     headerSubtitle:
       'Hidrostal Screw Centrifugal Compact Pumps are portable, heavy duty field units which combine usability and robustness with the superior hydraulic and solid handling performance of the famous screw centrifugal impeller.',
@@ -217,35 +160,16 @@ export const productsList = [
       },
     ],
     highlights: [
-      {
-        title: 'Solids handling of 50 mm (2") in diameter',
-      },
-      {
-        title:
-          'Robust unit capable of handling liquids containing fibrous matter',
-      },
-      {
-        title:
-          'Steep curve giving pressure reserve when pumping thick materials',
-      },
-      {
-        title:
-          'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
-      },
+      'Solids handling of 50 mm (2") in diameter',
+      'Robust unit capable of handling liquids containing fibrous matter',
+      'Steep curve giving pressure reserve when pumping thick materials',
+      'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
     ],
     applications: [
-      {
-        title: 'Industrial effluent',
-      },
-      {
-        title: 'Viscous sludge',
-      },
-      {
-        title: 'Return activated sludge',
-      },
-      {
-        title: 'Drainage',
-      },
+      'Industrial effluent',
+      'Viscous sludge',
+      'Return activated sludge',
+      'Drainage',
     ],
     specifications: [
       'Discharge-Sizes: 50 - 80 mm (2 - 3")',
@@ -262,10 +186,10 @@ export const productsList = [
     id: '5',
     image:
       'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_97/Thumb/end-suction-bearing-frame-pumps.jpg',
-    title: 'The fivth pump',
-    description: 'Some dedcription of the fivth pump',
+    title: 'The first pump',
+    description: 'Some dedcription of the first pump',
     headerImage:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_67/hinlnetherlands-rwziweespinfluentgemaal-f10kmitimmersiblemotorauffussbogen-hidrostal05102021-1719.jpg',
+      'https://www.halternerzeitung.de/wp-content/uploads/2022/07/630_0900_2369622_0926ha_wassergewinnung06.jpg',
     headerTitle: 'Compact Pumps',
     headerSubtitle:
       'Hidrostal Screw Centrifugal Compact Pumps are portable, heavy duty field units which combine usability and robustness with the superior hydraulic and solid handling performance of the famous screw centrifugal impeller.',
@@ -281,35 +205,16 @@ export const productsList = [
       },
     ],
     highlights: [
-      {
-        title: 'Solids handling of 50 mm (2") in diameter',
-      },
-      {
-        title:
-          'Robust unit capable of handling liquids containing fibrous matter',
-      },
-      {
-        title:
-          'Steep curve giving pressure reserve when pumping thick materials',
-      },
-      {
-        title:
-          'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
-      },
+      'Solids handling of 50 mm (2") in diameter',
+      'Robust unit capable of handling liquids containing fibrous matter',
+      'Steep curve giving pressure reserve when pumping thick materials',
+      'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
     ],
     applications: [
-      {
-        title: 'Industrial effluent',
-      },
-      {
-        title: 'Viscous sludge',
-      },
-      {
-        title: 'Return activated sludge',
-      },
-      {
-        title: 'Drainage',
-      },
+      'Industrial effluent',
+      'Viscous sludge',
+      'Return activated sludge',
+      'Drainage',
     ],
     specifications: [
       'Discharge-Sizes: 50 - 80 mm (2 - 3")',
@@ -325,11 +230,11 @@ export const productsList = [
   {
     id: '6',
     image:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_94/Thumb/compact-pump.jpg',
-    title: 'The sixth pump',
-    description: 'Some dedcription of the sixth pump',
+      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_97/Thumb/end-suction-bearing-frame-pumps.jpg',
+    title: 'The first pump',
+    description: 'Some dedcription of the first pump',
     headerImage:
-      'https://www.hidrostal.com/Pictures/Bilder/SpaltenBoxen_67/hinlnetherlands-rwziweespinfluentgemaal-f10kmitimmersiblemotorauffussbogen-hidrostal05102021-1719.jpg',
+      'https://www.halternerzeitung.de/wp-content/uploads/2022/07/630_0900_2369622_0926ha_wassergewinnung06.jpg',
     headerTitle: 'Compact Pumps',
     headerSubtitle:
       'Hidrostal Screw Centrifugal Compact Pumps are portable, heavy duty field units which combine usability and robustness with the superior hydraulic and solid handling performance of the famous screw centrifugal impeller.',
@@ -345,35 +250,16 @@ export const productsList = [
       },
     ],
     highlights: [
-      {
-        title: 'Solids handling of 50 mm (2") in diameter',
-      },
-      {
-        title:
-          'Robust unit capable of handling liquids containing fibrous matter',
-      },
-      {
-        title:
-          'Steep curve giving pressure reserve when pumping thick materials',
-      },
-      {
-        title:
-          'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
-      },
+      'Solids handling of 50 mm (2") in diameter',
+      'Robust unit capable of handling liquids containing fibrous matter',
+      'Steep curve giving pressure reserve when pumping thick materials',
+      'Mobile with a weight of 32 kg (70 lbs) including 10 m (33 ft) cable',
     ],
     applications: [
-      {
-        title: 'Industrial effluent',
-      },
-      {
-        title: 'Viscous sludge',
-      },
-      {
-        title: 'Return activated sludge',
-      },
-      {
-        title: 'Drainage',
-      },
+      'Industrial effluent',
+      'Viscous sludge',
+      'Return activated sludge',
+      'Drainage',
     ],
     specifications: [
       'Discharge-Sizes: 50 - 80 mm (2 - 3")',

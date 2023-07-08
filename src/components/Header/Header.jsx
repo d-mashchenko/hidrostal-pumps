@@ -1,5 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { usePathname } from 'next/navigation';
 
 const links = [
   {
@@ -14,9 +18,6 @@ const links = [
     title: 'Наші клієнти',
     href: '/clients',
   },
-];
-
-const additionalLinks = [
   {
     title: 'Технолгії Hidrostal',
     href: '/technologies',
@@ -36,36 +37,36 @@ const additionalLinks = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
+
+  const homePageClasses =
+    'absolute z-10 w-full hover:backdrop-blur-sm hover:bg-primary-600/30';
+  const anyPageClasses = 'bg-primary-600';
+
   return (
-    <header className='bg-primary-500 py-2'>
+    <header
+      className={`py-1 duration-300 ${
+        pathname === '/' ? homePageClasses : anyPageClasses
+      }`}>
       <div className='default-content flex items-center justify-between'>
-        <div className=' flex items-center gap-5'>
-          <Link href='/'>
-            <Image
-              src='/img/logo-white.png'
-              alt='logo'
-              width={220}
-              height={50}
-            />
-          </Link>
-          <ul className='flex gap-6'>
-            {links.map((link) => (
-              <li>
-                <Link className='font-bold text-white' href={link.href}>
+        <Link href='/'>
+          <Image src='/img/logo-white.png' alt='logo' width={220} height={50} />
+        </Link>
+        <ul className='flex gap-6'>
+          {links.map((link, index) => {
+            const isActive = pathname.startsWith(link.href);
+            return (
+              <li key={index}>
+                <Link
+                  className={`font-bold text-white hover:underline ${
+                    isActive ? 'underline' : ''
+                  }`}
+                  href={link.href}>
                   {link.title}
                 </Link>
               </li>
-            ))}
-          </ul>
-        </div>
-        <ul className='flex gap-6'>
-          {additionalLinks.map((link) => (
-            <li>
-              <Link className='font-bold text-white' href={link.href}>
-                {link.title}
-              </Link>
-            </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
     </header>
