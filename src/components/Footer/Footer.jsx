@@ -1,5 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
+
+import InstagramIcon from '../../../public/icons/instagram.svg';
+import FacebookIcon from '../../../public/icons/facebook.svg';
+import TelegramIcon from '../../../public/icons/telegram.svg';
 
 const footerLinks = [
   {
@@ -29,21 +32,18 @@ export function Footer() {
     <footer className='bg-primary-600 py-3'>
       <div className='default-content flex flex-col gap-3'>
         <div className='flex gap-5 justify-center'>
-          <Image
-            src='/icons/facebook.svg'
-            alt='facebook'
+          <FacebookIcon
+            className=' fill-gray-300 hover:fill-white duration-300'
             width={30}
             height={30}
           />
-          <Image
-            src='/icons/instagram.svg'
-            alt='instagram'
+          <InstagramIcon
+            className='fill-gray-300 hover:fill-white duration-300'
             width={30}
             height={30}
           />
-          <Image
-            src='/icons/telegram.svg'
-            alt='telegram'
+          <TelegramIcon
+            className='fill-gray-300 hover:fill-white duration-300'
             width={30}
             height={30}
           />
