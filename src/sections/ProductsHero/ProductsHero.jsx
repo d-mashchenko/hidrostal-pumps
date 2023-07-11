@@ -29,7 +29,9 @@ export const ProductsHero = () => {
       <div className='default-content text-white text-center'>
         <div>
           <h2 className='title'>{productsHeroData.title}</h2>
-          <h4 className='text-xl'>{productsHeroData.subtitle}</h4>
+          <h4 className='base-text base-text--lg'>
+            {productsHeroData.subtitle}
+          </h4>
         </div>
         <img
           className='my-10'
@@ -38,7 +40,7 @@ export const ProductsHero = () => {
         />
         <div className='grid grid-cols-3 gap-10'>
           {productsHeroData.cards.map((card) => (
-            <div className='text-start  backdrop-blur-md p-5'>
+            <div className='text-start backdrop-blur-md p-5'>
               <h3 className='text-2xl mb-10'>{card.title}</h3>
               <p>{card.description}</p>
             </div>

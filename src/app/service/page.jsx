@@ -1,4 +1,5 @@
 import { ClientBlock } from '@/components/ClientBlock/ClientBlock';
+import { ProductHero } from '@/sections/ProductHero/ProductHero';
 
 export const servicesList = [
   {
@@ -89,10 +90,16 @@ export const servicesList = [
 
 export default function Products() {
   return (
-    <div className='default-content'>
+    <>
+      <ProductHero
+        headerImage='https://bacsa.com.gt/wp-content/uploads/2023/03/1679413075397_pump_servicw.jpg'
+        title='service'
+        headerTitle='Сервіс'
+        headerSubtitle='Працюємо по всій Україні'
+      />
       {servicesList.map((client) => (
         <ClientBlock {...client} />
       ))}
-    </div>
+    </>
   );
 }

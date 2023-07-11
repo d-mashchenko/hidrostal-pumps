@@ -28,9 +28,9 @@ const videoList = [
 
 export const VideoBlock = () => {
   return (
-    <section className='py-10'>
+    <section className='section'>
       <div className='default-content'>
-        <h2 className='mb-8 text-5xl'>Видеообзоры оборудования Hidrostal</h2>
+        <h2 className='title'>Видеообзоры оборудования Hidrostal</h2>
         <div className='grid grid-cols-3 gap-6'>
           {videoList.map((video) => (
             <div>

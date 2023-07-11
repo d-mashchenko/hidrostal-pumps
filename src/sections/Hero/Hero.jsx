@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section className='w-full relative'>
       <video
-        className='w-full h-screen object-cover -z-10'
+        className='w-full h-screen object-cover'
         muted
         autoPlay
         playsInline

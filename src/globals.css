@@ -3,21 +3,53 @@
 @tailwind utilities;
 
 body {
-  @apply flex h-screen flex-col justify-between;
+  @apply flex h-screen flex-col justify-between base-text;
+}
+
+body.lock {
+  /* @apply overflow-hidden; */
+}
+
+.base-text {
+  @apply text-sm;
+
+  @screen md {
+    @apply text-base;
+  }
+
+  &--lg {
+    @apply text-lg;
+
+    @screen md {
+      @apply text-xl;
+    }
+  }
 }
 
 .default-content {
-  @apply mx-auto w-full max-w-[1640px] px-10 sm:px-20;
+  @apply mx-auto w-full max-w-[1640px] px-10 md:px-20;
 }
 
 .title {
   @apply text-5xl mb-10;
+
+  &--sm {
+    @apply text-2xl mb-3;
+  }
 }
 
 .section {
-  @apply py-16;
+  @apply py-20;
 }
 
 .button {
   @apply text-white py-3 px-4 rounded bg-primary-600 hover:bg-primary-500 duration-300;
+}
+
+.blanket {
+  @apply fixed w-full h-screen backdrop-blur hidden z-10 duration-300;
+
+  &.active {
+    @apply block duration-300;
+  }
 }

@@ -14,8 +14,8 @@ export const ProductCard = ({ image, title, description, id }) => {
           />
         </div>
         <div className='p-4'>
-          <h3 className='pb-2 text-xl'>{title}</h3>
-          <p>{description}</p>
+          <h3 className='title title--sm'>{title}</h3>
+          <p className='base-text'>{description}</p>
         </div>
       </div>
     </Link>

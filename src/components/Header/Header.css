@@ -1,0 +1,73 @@
+.Header {
+  @apply fixed w-full z-10 bg-primary-600 py-1 duration-300;
+
+  &__container {
+    @apply flex items-center justify-between;
+  }
+
+  &__menu-wrapper {
+    @apply absolute top-0 -left-full duration-500 bg-primary-600 h-screen p-10;
+
+    @screen lg {
+      @apply static h-auto p-0 bg-transparent;
+    }
+
+    &.active {
+      @apply left-0 backdrop-blur;
+    }
+  }
+
+  &__menu {
+    @apply text-xl gap-6 flex-col flex pl-5;
+
+    @screen lg {
+      @apply flex-row pl-0 text-base;
+    }
+  }
+
+  &__menu-button {
+    @apply relative w-7 h-5 cursor-pointer z-10;
+
+    @screen lg {
+      @apply hidden;
+    }
+
+    &.active span {
+      @apply scale-0 duration-300;
+    }
+
+    &.active:before {
+      @apply top-1/2 -translate-y-1/2 rotate-45 duration-300;
+    }
+
+    &.active:after {
+      @apply bottom-1/2 translate-y-1/2 -rotate-45 duration-300;
+    }
+
+    &:after,
+    &:before,
+    & span {
+      @apply absolute block left-0 h-[2px] bg-white w-full;
+    }
+
+    &:after,
+    &:before {
+      content: '';
+    }
+
+    &:before {
+      @apply top-0;
+    }
+    &:after {
+      @apply bottom-0;
+    }
+
+    & span {
+      @apply top-1/2 -translate-y-1/2 scale-100 duration-300;
+    }
+  }
+
+  &__logo {
+    @apply mb-10 lg:hidden;
+  }
+}

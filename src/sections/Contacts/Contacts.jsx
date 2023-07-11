@@ -1,6 +1,6 @@
 export const Contacts = () => {
   return (
-    <section>
+    <section className='section'>
       <div className='default-content flex gap-20'>
         <img
           className='w-1/2'

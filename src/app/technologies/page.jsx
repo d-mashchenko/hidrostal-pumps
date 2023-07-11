@@ -1,4 +1,5 @@
 import { Technologies } from '@/sections/Technologies/Technologies';
+import { ProductHero } from '@/sections/ProductHero/ProductHero';
 
 export const technologiesList = [
   {
@@ -249,6 +250,12 @@ export const technologiesList = [
 export default function TechnologiesPage() {
   return (
     <>
+      <ProductHero
+        headerImage='https://www.polypump.co.uk/carousel/58b9b4d3793be3c0.jpg'
+        title='ukraine'
+        headerTitle='Технології'
+        headerSubtitle='Розробляємо нові технології'
+      />
       <Technologies technologiesList={technologiesList} />
     </>
   );

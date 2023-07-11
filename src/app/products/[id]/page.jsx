@@ -1,4 +1,4 @@
-import { productsList } from '@/data/data';
+import { productsList } from '../page';
 import { ProductContent } from '@/sections/ProductContent/ProductContent';
 import { ProductHero } from '@/sections/ProductHero/ProductHero';
 import { ProductSpecification } from '@/sections/ProductSpecification/ProductSpecification';

@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 export const ClientBlock = ({ title, subtitle, description, photos }) => {
   return (
     <section className='section border-b-2'>
-      <div>
+      <div className='default-content'>
         <h2 className='title'>{title}</h2>
         <Swiper
           className='mb-5'

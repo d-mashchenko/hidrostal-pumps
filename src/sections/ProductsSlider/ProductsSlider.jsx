@@ -3,7 +3,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { ProductCard } from '@/components/ProductCard/ProductCard';
-import { productsList } from '@/data/data';
 import { Button } from '@/components/Button/Button';
 
 import 'swiper/css';
@@ -11,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import './ProductsSlider.css';
 
-export const ProductsSlider = () => {
+export const ProductsSlider = ({ productsList }) => {
   return (
     <section className='section'>
       <div className='default-content'>

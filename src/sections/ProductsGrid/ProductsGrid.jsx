@@ -1,7 +1,6 @@
 import { ProductCard } from '@/components/ProductCard/ProductCard';
-import { productsList } from '@/data/data';
 
-export const ProductsGrid = () => {
+export const ProductsGrid = ({ productsList }) => {
   return (
     <section className='section'>
       <div className='default-content'>

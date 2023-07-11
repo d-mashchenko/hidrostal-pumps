@@ -1,9 +1,12 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { usePathname } from 'next/navigation';
+
+import './Header.css';
 
 const links = [
   {
@@ -38,36 +41,94 @@ const links = [
 
 export function Header() {
   const pathname = usePathname();
+  const [scrollFirstBlock, setScrollFirstBlock] = useState(false);
 
-  const homePageClasses =
-    'absolute z-10 w-full hover:backdrop-blur-sm hover:bg-primary-600/30';
-  const anyPageClasses = 'bg-primary-600';
+  const listenScrollEvent = (event) => {
+    const screenHeight = window.innerHeight;
+    if (window.scrollY >= screenHeight) {
+      setScrollFirstBlock(true);
+    } else {
+      setScrollFirstBlock(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+    return () => window.removeEventListener('scroll', listenScrollEvent);
+  }, []);
+
+  const toggleActiveClassHandler = () => {
+    const button = document.querySelector('.Header__menu-button');
+    const headerMenu = document.querySelector('.Header__menu-wrapper');
+    const blanket = document.querySelector('.blanket');
+
+    button.classList.contains('active')
+      ? button.classList.remove('active')
+      : button.classList.add('active');
+
+    headerMenu.classList.contains('active')
+      ? headerMenu.classList.remove('active')
+      : headerMenu.classList.add('active');
+
+    headerMenu.classList.contains('active')
+      ? blanket.classList.add('active')
+      : blanket.classList.remove('active');
+
+    blanket.addEventListener('click', removeActiveClassHandler);
+  };
+
+  const removeActiveClassHandler = () => {
+    const button = document.querySelector('.Header__menu-button');
+    const headerMenu = document.querySelector('.Header__menu-wrapper');
+    const blanket = document.querySelector('.blanket');
+
+    button.classList.remove('active');
+    headerMenu.classList.remove('active');
+    blanket.classList.remove('active');
+  };
 
   return (
     <header
-      className={`py-1 duration-300 ${
-        pathname === '/' ? homePageClasses : anyPageClasses
+      className={`Header  ${
+        pathname === '/' && !scrollFirstBlock
+          ? 'bg-transparent'
+          : 'bg-primary-600'
       }`}>
-      <div className='default-content flex items-center justify-between'>
+      <div className='Header__container default-content'>
         <Link href='/'>
-          <Image src='/img/logo-white.png' alt='logo' width={220} height={50} />
+          <Image src='/img/logo-white.png' alt='logo' width={180} height={40} />
         </Link>
-        <ul className='flex gap-6'>
-          {links.map((link, index) => {
-            const isActive = pathname.startsWith(link.href);
-            return (
-              <li key={index}>
-                <Link
-                  className={`font-bold text-white hover:underline ${
-                    isActive ? 'underline' : ''
-                  }`}
-                  href={link.href}>
-                  {link.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div onClick={toggleActiveClassHandler} className='Header__menu-button'>
+          <span></span>
+        </div>
+        <div className='Header__menu-wrapper'>
+          <Link onClick={removeActiveClassHandler} href='/'>
+            <Image
+              className='Header__logo'
+              src='/img/logo-white.png'
+              alt='logo'
+              width={180}
+              height={40}
+            />
+          </Link>
+          <ul className='Header__menu'>
+            {links.map((link, index) => {
+              const isActive = pathname.startsWith(link.href);
+              return (
+                <li key={index}>
+                  <Link
+                    className={`font-bold text-white hover:underline ${
+                      isActive ? 'underline' : ''
+                    }`}
+                    onClick={removeActiveClassHandler}
+                    href={link.href}>
+                    {link.title}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </header>
   );

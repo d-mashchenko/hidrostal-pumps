@@ -1,4 +1,5 @@
 import { ClientBlock } from '@/components/ClientBlock/ClientBlock';
+import { ProductHero } from '@/sections/ProductHero/ProductHero';
 
 export const clientsList = [
   {
@@ -89,10 +90,16 @@ export const clientsList = [
 
 export default function Products() {
   return (
-    <div className='default-content'>
+    <>
+      <ProductHero
+        headerImage='https://static.vecteezy.com/system/resources/previews/007/721/801/original/polygonal-ukraine-map-low-poly-design-map-made-of-triangles-on-white-background-geometric-rumpled-triangular-low-poly-style-gradient-graphic-line-dots-ui-design-free-vector.jpg'
+        title='ukraine'
+        headerTitle='Наші клієнти'
+        headerSubtitle='Працюємо по всій Україні'
+      />
       {clientsList.map((client) => (
         <ClientBlock {...client} />
       ))}
-    </div>
+    </>
   );
 }
