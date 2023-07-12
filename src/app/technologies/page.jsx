@@ -1,5 +1,6 @@
 import { Technologies } from '@/sections/Technologies/Technologies';
 import { ProductHero } from '@/sections/ProductHero/ProductHero';
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const technologiesList = [
   {
@@ -256,6 +257,7 @@ export default function TechnologiesPage() {
         headerTitle='Технології'
         headerSubtitle='Розробляємо нові технології'
       />
+      <BreadCrumbs />
       <Technologies technologiesList={technologiesList} />
     </>
   );

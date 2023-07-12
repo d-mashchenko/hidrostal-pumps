@@ -1,3 +1,4 @@
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 import { ClientBlock } from '@/components/ClientBlock/ClientBlock';
 import { ProductHero } from '@/sections/ProductHero/ProductHero';
 
@@ -97,6 +98,7 @@ export default function Products() {
         headerTitle='Наші клієнти'
         headerSubtitle='Працюємо по всій Україні'
       />
+      <BreadCrumbs />
       {clientsList.map((client) => (
         <ClientBlock {...client} />
       ))}

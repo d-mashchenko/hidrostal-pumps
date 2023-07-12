@@ -1,0 +1,20 @@
+.breadcumbs__list {
+  @apply flex gap-1;
+}
+
+.breadcumbs__item {
+  @apply text-lg;
+
+  &--inactive {
+    @apply hover:text-primary-600;
+
+    &:after {
+      content: '/';
+      @apply p-2 pointer-events-none hover:text-black;
+    }
+  }
+
+  &--active {
+    @apply pointer-events-none;
+  }
+}

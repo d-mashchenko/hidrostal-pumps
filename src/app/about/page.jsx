@@ -1,3 +1,4 @@
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 import { ProductHero } from '@/sections/ProductHero/ProductHero';
 
 export default function Products() {
@@ -9,6 +10,7 @@ export default function Products() {
         headerTitle='Наша компанія'
         headerSubtitle='Щось робимо'
       />
+      <BreadCrumbs />
       <h2 className='default-content title mt-20'>About page</h2>
     </>
   );

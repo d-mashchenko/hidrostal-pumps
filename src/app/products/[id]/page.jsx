@@ -1,3 +1,4 @@
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 import { productsList } from '../page';
 import { ProductContent } from '@/sections/ProductContent/ProductContent';
 import { ProductHero } from '@/sections/ProductHero/ProductHero';
@@ -11,6 +12,7 @@ export default function Product({ params }) {
   return (
     <>
       <ProductHero {...currentProduct} />
+      <BreadCrumbs />
       <ProductContent {...currentProduct} />
       <ProductSpecification {...currentProduct} />
     </>

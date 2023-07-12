@@ -42,8 +42,9 @@ const links = [
 export function Header() {
   const pathname = usePathname();
   const [scrollFirstBlock, setScrollFirstBlock] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
-  const listenScrollEvent = (event) => {
+  const listenScrollEvent = () => {
     const screenHeight = window.innerHeight;
     if (window.scrollY >= screenHeight) {
       setScrollFirstBlock(true);
@@ -52,40 +53,16 @@ export function Header() {
     }
   };
 
+  const toggleActiveClassHandler = () => {
+    setIsActive(!isActive);
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', listenScrollEvent);
-    return () => window.removeEventListener('scroll', listenScrollEvent);
+    return () => {
+      window.removeEventListener('scroll', listenScrollEvent);
+    };
   }, []);
-
-  const toggleActiveClassHandler = () => {
-    const button = document.querySelector('.Header__menu-button');
-    const headerMenu = document.querySelector('.Header__menu-wrapper');
-    const blanket = document.querySelector('.blanket');
-
-    button.classList.contains('active')
-      ? button.classList.remove('active')
-      : button.classList.add('active');
-
-    headerMenu.classList.contains('active')
-      ? headerMenu.classList.remove('active')
-      : headerMenu.classList.add('active');
-
-    headerMenu.classList.contains('active')
-      ? blanket.classList.add('active')
-      : blanket.classList.remove('active');
-
-    blanket.addEventListener('click', removeActiveClassHandler);
-  };
-
-  const removeActiveClassHandler = () => {
-    const button = document.querySelector('.Header__menu-button');
-    const headerMenu = document.querySelector('.Header__menu-wrapper');
-    const blanket = document.querySelector('.blanket');
-
-    button.classList.remove('active');
-    headerMenu.classList.remove('active');
-    blanket.classList.remove('active');
-  };
 
   return (
     <header
@@ -98,11 +75,13 @@ export function Header() {
         <Link href='/'>
           <Image src='/img/logo-white.png' alt='logo' width={180} height={40} />
         </Link>
-        <div onClick={toggleActiveClassHandler} className='Header__menu-button'>
+        <div
+          onClick={toggleActiveClassHandler}
+          className={`Header__menu-button ${isActive ? 'active' : ''}`}>
           <span></span>
         </div>
-        <div className='Header__menu-wrapper'>
-          <Link onClick={removeActiveClassHandler} href='/'>
+        <div className={`Header__menu-wrapper ${isActive ? 'active' : ''} `}>
+          <Link onClick={toggleActiveClassHandler} href='/'>
             <Image
               className='Header__logo'
               src='/img/logo-white.png'
@@ -120,7 +99,7 @@ export function Header() {
                     className={`font-bold text-white hover:underline ${
                       isActive ? 'underline' : ''
                     }`}
-                    onClick={removeActiveClassHandler}
+                    onClick={toggleActiveClassHandler}
                     href={link.href}>
                     {link.title}
                   </Link>

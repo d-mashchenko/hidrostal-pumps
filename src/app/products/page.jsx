@@ -1,5 +1,6 @@
 import { ProductsGrid } from '@/sections/ProductsGrid/ProductsGrid';
 import { ProductsHero } from '@/sections/ProductsHero/ProductsHero';
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const productsList = [
   {
@@ -277,6 +278,7 @@ export default function Products() {
   return (
     <>
       <ProductsHero />
+      <BreadCrumbs />
       <ProductsGrid productsList={productsList} />
     </>
   );

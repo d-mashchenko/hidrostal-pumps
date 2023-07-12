@@ -1,3 +1,4 @@
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 import { Contacts } from '@/sections/Contacts/Contacts';
 import { ProductHero } from '@/sections/ProductHero/ProductHero';
 
@@ -10,6 +11,7 @@ export default function Products() {
         headerTitle='Контакти'
         headerSubtitle='Працюємо по всій Україні'
       />
+      <BreadCrumbs />
       <Contacts />
     </>
   );

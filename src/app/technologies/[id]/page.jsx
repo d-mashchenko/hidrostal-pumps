@@ -4,6 +4,7 @@ import { ProductSpecification } from '@/sections/ProductSpecification/ProductSpe
 
 import { technologiesList } from '../page';
 import { TechDescription } from '@/sections/TechDescription/TechDescription';
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 
 export default function Products({ params }) {
   const currentTechnology = technologiesList.find((tech) => {
@@ -13,6 +14,7 @@ export default function Products({ params }) {
   return (
     <>
       <ProductHero {...currentTechnology} />
+      <BreadCrumbs />
       <ProductContent {...currentTechnology} />
       <ProductSpecification {...currentTechnology} />
       <TechDescription {...currentTechnology} />

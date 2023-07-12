@@ -1,3 +1,4 @@
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 import { UsageInnerCard } from '@/components/UsageInnerCard/UsageInnerCard';
 import { Usage } from '@/sections/Usage/Usage';
 import { UsageText } from '@/sections/UsageText/UsageText';
@@ -192,6 +193,7 @@ export default function Products({ params }) {
         src={currentUsage.header.image}
         alt={currentUsage.title}
       />
+      <BreadCrumbs />
       <UsageText {...currentUsage} />
       <div className='grid grid-cols-4'>
         {currentUsage.cards.map((card) => (

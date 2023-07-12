@@ -1,3 +1,4 @@
+import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 import { ProductHero } from '@/sections/ProductHero/ProductHero';
 import { VideoBlock } from '@/sections/VideoBLock/VideoBlock';
 
@@ -10,6 +11,7 @@ export default function Video() {
         headerTitle='Відео'
         headerSubtitle='Щось знімаємо'
       />
+      <BreadCrumbs />
       <VideoBlock />
     </>
   );
